@@ -1,7 +1,7 @@
 ---
 title: "35-color B Cell + Myeloid Panel: Iteration 4"
 author: "John Bianchi Colangeli, Kelly Lundsten, Fanuel Messaggio, Andrew Patentrager"
-date: "July 2025 push test"
+date: "July 2025"
 output: 
   html_document:
     toc: true
