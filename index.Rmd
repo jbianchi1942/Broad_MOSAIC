@@ -183,9 +183,7 @@ First unmxing matrix attempted
 
 ### Spectral Unmixing Setup
 
-[.pdfs of spectral ribbons and plots for each unmixed control](https://app.box.com/folder/333222412731)
-
-![](images/001_spectral_unmixing_setup.png)
+![](images/001_spectral_unmixing_setup-01.png)
 
 ### SSM
 
@@ -193,11 +191,11 @@ First unmxing matrix attempted
 
 ### Unmixing results: unmixed controls
 
-[.pdfs of all unmixed controls for matrix 001](https://app.box.com/folder/333222412731)
+[PDFs of all unmixed controls for matrix 001](https://app.box.com/folder/333222412731)
 
 ### 1xNs of unmixed single stained cells
 
-[PDFs of cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
+[PDFs of single stained cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
 
 # OMIP {.tabset}
 
