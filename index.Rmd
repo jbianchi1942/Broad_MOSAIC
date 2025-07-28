@@ -27,7 +27,7 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |                  |                                                                                                                 |
-|----------------------|:-------------------------------------------------|
+|----------------------|:------------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
 
@@ -98,7 +98,7 @@ PBMC vials were placed in a 37C water bath until a samll ice crystal remained an
 
 PBMCs were pre-blocked in Human Fc and monocyte block (1:20) for 15 minutes and aliquoted to 5mL FACS tubes or 96-well plates for staining. Cells were resuspended 100 uL Viakrome808 and stained for 15 minutes at RT in the dark and washed 2X. Samples for panel staining were resuspended in 50uL of IgG mix for 15 minutes before adding 100 uL of 1.5X Ab cocktail. For bead controls, 1 drop of Versacomp beads + 1.5 uL of Ab-fluor conjugate was added to wells of a 96-well plate. For cell controls, 45uL of staining buffer + appropriate volume of Ab-fluor conjugate added to wells followed by 50uL of cell suspension adjusted to to 5e6 cells/mL. Samples and controls were stained for 30 minutes at RT and washed 3X before acquisition.
 
-## **Instrument Settings**
+## **Instrument QC and Settings**
 
 **Instrument QC**
 
@@ -114,7 +114,7 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 
 ## **FCS Files** {.tabset}
 
-### FMMs and mini-panels
+### **FMMs and mini-panels**
 
 [Link to raw FCS files: FMMSs, mini-panels, fullstains](https://app.box.com/folder/333245702120)
 
@@ -133,38 +133,38 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 | 11            | US_healthy_raw.fcs        |
 | 12            | US_CLL_raw.fcs            |
 
-### single color control files {.tabset}
+### **single color control files** {.tabset}
 
 [Link to raw single-color control files](https://app.box.com/folder/333247847268)
 
-## Overview of the workflow
+## **Overview of the workflow**
 
 -   raw bead and cell control .fcs files were loaded into two separate experiment files (CytExpert off-instrument).
 -   scatter and spectral ribbon plots were examined for each control one by one.
 
-## Unmixing Matrix #001 {.tabset}
+## **Unmixing Matrix #001** {.tabset}
 
-### Description
+### **Description**
 
 First unmxing matrix attempted. All controls were cleaned for contaminating events. All spectral controls are beads except for Viakrome808 (viability) and R720-IgA (I don't think this clone binds to VersaComp beads very well)
 
-### Unmixed .fcs files
+### **Unmixed .fcs files**
 
 [FCS files: Unmixed FMMS, mini-panels, full stains, unstained for healthy and CLL](https://app.box.com/folder/333247578556)
 
-### Spectral Unmixing Setup
+### **Spectral Unmixing Setup**
 
 ![](images/001_spectral_unmixing_setup-01.png){width="800"}
 
-### SSM
+### **SSM**
 
 [Spectral Unmixing Details for 001](https://app.box.com/file/1938190300586)
 
-### Unmixing results: unmixed controls
+### **Unmixing results: unmixed controls**
 
 [PDFs of all unmixed controls for matrix 001](https://app.box.com/folder/333222412731)
 
-### 1xNs of unmixed single stained cells
+### **1xNs of unmixed single stained cells**
 
 [PDFs of single stained cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
 
