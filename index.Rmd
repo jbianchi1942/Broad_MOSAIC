@@ -142,8 +142,6 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 -   raw bead and cell control .fcs files were loaded into two separate experiment files (CytExpert off-instrument).
 -   scatter and spectral ribbon plots were examined for each control one by one.
 
-## Single Color Control Quality Check
-
 ## Unmixing Matrix #001 {.tabset}
 
 ### Description
