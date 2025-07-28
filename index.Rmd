@@ -27,14 +27,14 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |                  |                                                                                                                 |
-|------------------|:----------------------------------------------------------------------------------------------------------------|
+|---------------|:--------------------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
 
 ## **Panel Info**
 
 |                |            |          |          |          |          |                 |                        |          |                            |
-|:---------------|:-----------|:--------:|:--------:|:--------:|:--------:|:---------------:|:----------------------:|:--------:|:--------------------------:|
+|:-------|:-------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
 | **Dye**        | **Marker** | **FMM1** | **FMM2** | **FMM3** | **FMM4** | **B cell only** | **NK, Baso, DC, Mono** | **FULL** | **Amount (uL) per 100 uL** |
 | **BUV395**     | **CD45**   |   CD45   |   CD45   |   CD45   |   CD45   |      CD45       |          CD45          |   CD45   |             2              |
 | **BUV496**     | **HLA-DR** |  HLA-DR  |    X     |  HLA-DR  |  HLA-DR  |     HLA-DR      |         HLA-DR         |  HLA-DR  |             1              |
@@ -195,9 +195,9 @@ First unmxing matrix attempted
 
 [.pdfs of all unmixed controls for matrix 001](https://app.box.com/folder/333222412731)
 
-### 1xNs
+### 1xNs of unmixed single stained cells
 
-[Link](https://drive.google.com/file/d/1_xLTdIdyj8Yb_Z_1nuHxowsNZ_J-naNy/view?usp=drive_link "Title tooltip")[to](https://beckman.box.com/s/3l0pyxs34q9zg65gmmdnpvpv6d9gzdwq "Title tooltip")[: 1xNs of cell controls unmixed with matrix 001](https://beckman.box.com/s/hoon09y27ww75sya6yzex5o5c0wx5r30)
+[PDFs of cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
 
 # OMIP {.tabset}
 
