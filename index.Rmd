@@ -27,7 +27,7 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |                  |                                                                                                                 |
-|---------------|:--------------------------------------------------------|
+|-----------------|:------------------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
 
@@ -183,7 +183,7 @@ First unmxing matrix attempted
 
 ### Spectral Unmixing Setup
 
-![](images/001_spectral_unmixing_setup-01.png)
+![](images/001_spectral_unmixing_setup-01.png){width="800"}
 
 ### SSM
 
