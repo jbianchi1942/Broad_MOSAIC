@@ -27,7 +27,7 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |                  |                                                                                                                 |
-|--------------------|:---------------------------------------------------|
+|----------------------|:-------------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
 
@@ -90,21 +90,21 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 
 ## **Staining Procedure**
 
-### Thawing PBMCs
+**Thawing PBMCs**
 
 PBMC vials were placed in a 37C water bath until a samll ice crystal remained and PBMCs were transferred to 10 mL of thaw medium, spun at 400 x g for 10 minutes, and washed 1X before counting.
 
-### Blocking and Staining
+**Blocking and Staining**
 
 PBMCs were pre-blocked in Human Fc and monocyte block (1:20) for 15 minutes and aliquoted to 5mL FACS tubes or 96-well plates for staining. Cells were resuspended 100 uL Viakrome808 and stained for 15 minutes at RT in the dark and washed 2X. Samples for panel staining were resuspended in 50uL of IgG mix for 15 minutes before adding 100 uL of 1.5X Ab cocktail. For bead controls, 1 drop of Versacomp beads + 1.5 uL of Ab-fluor conjugate was added to wells of a 96-well plate. For cell controls, 45uL of staining buffer + appropriate volume of Ab-fluor conjugate added to wells followed by 50uL of cell suspension adjusted to to 5e6 cells/mL. Samples and controls were stained for 30 minutes at RT and washed 3X before acquisition.
 
 ## **Instrument Settings**
 
-### Instrument QC
+**Instrument QC**
 
 Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all detectors. The instrument passed QC the day it was serviced by Nelson on on 7/11/25.
 
-### Instrument and Acquisition Settings
+**Instrument and Acquisition Settings**
 
 -   Control and sample data were recorded in three experiment files
 -   Assay gain settings were applied to all tubes/wells
