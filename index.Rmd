@@ -27,7 +27,7 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |                  |                                                                                                                 |
-|----------------------|:------------------------------------------------|
+|-----------------------|:------------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
 
@@ -167,6 +167,14 @@ First unmxing matrix attempted. All controls were cleaned for contaminating even
 ### **1xNs of unmixed single stained cells**
 
 [PDFs of single stained cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
+
+### **issues**
+
+[link to pdfs of CLL markers gated on CD19+](https://app.box.com/folder/333471148033)
+
+![](images/CLL_markers_on_CD19pos_healthy.png)
+
+![](images/CLL_markers_on_CD19pos_CLL.png)
 
 # OMIP {.tabset}
 
