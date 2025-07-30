@@ -172,6 +172,8 @@ First unmxing matrix attempted. All controls were cleaned for contaminating even
 
 [link to pdfs of CLL markers gated on CD19+](https://app.box.com/folder/333471148033)
 
+[plots recreated from this paper](https://pmc.ncbi.nlm.nih.gov/articles/PMC8276061/)
+
 ![](images/CLL_markers_on_CD19pos_healthy.png)
 
 ![](images/CLL_markers_on_CD19pos_CLL.png)
