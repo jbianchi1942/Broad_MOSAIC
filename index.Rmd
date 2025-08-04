@@ -27,7 +27,7 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |                  |                                                                                                                 |
-|-----------------------|:------------------------------------------------|
+|-----------------------|:-----------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
 
@@ -146,7 +146,9 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 
 ### **Description**
 
-First unmxing matrix attempted. All controls were cleaned for contaminating events. All spectral controls are beads except for Viakrome808 (viability) and R720-IgA (I don't think this clone binds to VersaComp beads very well)
+First unmxing matrix attempted. All controls were cleaned for contaminating events. All spectral controls are beads except for Viakrome808 (viability) and R720-IgA (I don't think this clone binds to VersaComp beads very well).
+
+A complete copy of the unmixing experiment (.xitsp file + .fcs file directory with control files can be found [here](https://app.box.com/folder/334368687874))
 
 ### **Unmixed .fcs files**
 
