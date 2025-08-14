@@ -18,6 +18,7 @@ output:
 }
 </style>
 ```
+
 # Summary
 
 Iteration 4 of B cell plus myeloid panel. This report contains descriptions of human samples used, panel information, staining protocol, instrument and acquisition settings, and the generated .fcs files. The data analysis section outlines the workflow for assessing single color control quality and optmiziation of unmixing. To evaluate spectral unmixing, Iterations of unmixing matrices were applied to single stained cell controls and healthy and disease samples,images and links to relevant plots. Lastly, an OMIP section was created to house data we need for the OMIP.
@@ -26,51 +27,51 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 
 ## **PBMCs**
 
-|                  |                                                                                                                 |
-|-----------------------|:-----------------------------------------------|
+|  |  |
+|-------------------------|:-----------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
-| **CLL PBMC**     | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples)                                    |
+| **CLL PBMC** | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples) |
 
 ## **Panel Info**
 
-|                |            |          |          |          |          |                 |                        |          |                            |
+|  |  |  |  |  |  |  |  |  |  |
 |:-------|:-------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| **Dye**        | **Marker** | **FMM1** | **FMM2** | **FMM3** | **FMM4** | **B cell only** | **NK, Baso, DC, Mono** | **FULL** | **Amount (uL) per 100 uL** |
-| **BUV395**     | **CD45**   |   CD45   |   CD45   |   CD45   |   CD45   |      CD45       |          CD45          |   CD45   |             2              |
-| **BUV496**     | **HLA-DR** |  HLA-DR  |    X     |  HLA-DR  |  HLA-DR  |     HLA-DR      |         HLA-DR         |  HLA-DR  |             1              |
-| **BUV615**     | **CD123**  |  CD123   |  CD123   |  CD123   |  CD123   |        X        |         CD123          |  CD123   |            1.25            |
-| **BUV661**     | **CD34**   |    X     |   CD34   |   CD34   |   CD34   |      CD34       |          CD34          |   CD34   |            2.5             |
-| **BUV737**     | **IgG**    |   IgG    |    X     |   IgG    |   IgG    |       IgG       |           X            |   IgG    |            2.5             |
-| **BUV805**     | **CD3**    |   CD3    |   CD3    |   CD3    |   CD3    |       CD3       |          CD3           |   CD3    |            1.25            |
-| **BV421**      | **CD27**   |   CD27   |    X     |   CD27   |   CD27   |      CD27       |           X            |   CD27   |            1.25            |
-| **SB436**      | **CD11c**  |    X     |  CD11c   |  CD11c   |  CD11c   |      CD11c      |         CD11c          |  CD11c   |            2.5             |
-| **BV480**      | **CD21**   |   CD21   |   CD21   |   CD21   |    X     |      CD21       |           X            |   CD21   |            1.25            |
-| **BV510**      | **CD57**   |   CD57   |   CD57   |   CD57   |   CD57   |        X        |          CD57          |   CD57   |            1.25            |
-| **BV605**      | **Lambda** |  Lambda  |  Lambda  |    X     |  Lambda  |     Lambda      |           X            |  Lambda  |             5              |
-| **BV650**      | **IgM**    |   IgM    |   IgM    |   IgM    |    X     |       IgM       |           X            |   IgM    |            2.5             |
-| **BV711**      | **CD117**  |    X     |  CD117   |  CD117   |  CD117   |        X        |         CD117          |  CD117   |             5              |
-| **BV750**      | **CD14**   |   CD14   |   CD14   |   CD14   |   CD14   |      CD14       |          CD14          |   CD14   |            2.5             |
-| **BV785**      | **CD19**   |   CD19   |   CD19   |   CD19   |   CD19   |      CD19       |          CD19          |   CD19   |             1              |
-| **BB515**      | **CD5**    |   CD5    |   CD5    |    X     |   CD5    |       CD5       |           X            |   CD5    |            2.5             |
-| **RB545**      | **CD11b**  |  CD11b   |  CD11b   |  CD11b   |    X     |        X        |         CD11b          |  CD11b   |            1.25            |
-| **RB613**      | **CD23**   |    X     |   CD23   |   CD23   |   CD23   |      CD23       |           X            |   CD23   |            1.25            |
-| **RB670**      | **CD79b**  |  CD79b   |  CD79b   |  CD79b   |    X     |        X        |           X            |  CD79b   |            1.25            |
-| **RB705**      | **CD24**   |   CD24   |   CD24   |    X     |   CD24   |      CD24       |           X            |   CD24   |            1.25            |
-| **RB744**      | **CD81**   |   CD81   |   CD81   |   CD81   |    X     |        X        |           X            |   CD81   |            2.5             |
-| **RB780**      | **CD16**   |   CD16   |   CD16   |   CD16   |   CD16   |        X        |          CD16          |   CD16   |            1.25            |
-| **PE**         | **CD38**   |   CD38   |   CD38   |    X     |   CD38   |      CD38       |           X            |   CD38   |            2.5             |
-| **PEDZL594**   | **CD10**   |   CD10   |   CD10   |   CD10   |    X     |      CD10       |           X            |   CD10   |            2.5             |
-| **PE-F640**    | **CD56**   |    X     |   CD56   |   CD56   |   CD56   |      CD56       |          CD56          |   CD56   |            1.25            |
-| **RY703**      | **CD43**   |    X     |   CD43   |   CD43   |   CD43   |        X        |           X            |   CD43   |            1.25            |
-| **PE-Cy7**     | **CD200**  |  CD200   |    X     |  CD200   |  CD200   |      CD200      |           X            |  CD200   |             1              |
-| **PE-F810**    | **CD303**  |  CD303   |  CD303   |  CD303   |    X     |      CD303      |         CD303          |  CD303   |            2.5             |
-| **APC**        | **CD64**   |    X     |   CD64   |   CD64   |   CD64   |      CD64       |          CD64          |   CD64   |            2.5             |
-| **AF647**      | **IgD**    |   IgD    |    X     |   IgD    |   IgD    |       IgD       |           X            |   IgD    |             1              |
-| **R720**       | **IgA**    |   IgA    |   IgA    |    X     |   IgA    |       IgA       |           X            |   IgA    |            2.5             |
-| **APC-Vio770** | **kappa**  |  kappa   |  kappa   |  kappa   |    X     |      kappa      |           X            |  kappa   |             5              |
-| **APC-F810**   | **CD15**   |   CD15   |   CD15   |    X     |   CD15   |        X        |          CD15          |   CD15   |            2.5             |
-| **IR-820**     | **CD20**   |    X     |   CD20   |   CD20   |   CD20   |      CD20       |           X            |   CD20   |            2.5             |
-| **VK808**      | **VK808**  |  VK808   |  VK808   |  VK808   |  VK808   |      VK808      |         VK808          |  VK808   |            0.25            |
+| **Dye** | **Marker** | **FMM1** | **FMM2** | **FMM3** | **FMM4** | **B cell only** | **NK, Baso, DC, Mono** | **FULL** | **Amount (uL) per 100 uL** |
+| **BUV395** | **CD45** | CD45 | CD45 | CD45 | CD45 | CD45 | CD45 | CD45 | 2 |
+| **BUV496** | **HLA-DR** | HLA-DR | X | HLA-DR | HLA-DR | HLA-DR | HLA-DR | HLA-DR | 1 |
+| **BUV615** | **CD123** | CD123 | CD123 | CD123 | CD123 | X | CD123 | CD123 | 1.25 |
+| **BUV661** | **CD34** | X | CD34 | CD34 | CD34 | CD34 | CD34 | CD34 | 2.5 |
+| **BUV737** | **IgG** | IgG | X | IgG | IgG | IgG | X | IgG | 2.5 |
+| **BUV805** | **CD3** | CD3 | CD3 | CD3 | CD3 | CD3 | CD3 | CD3 | 1.25 |
+| **BV421** | **CD27** | CD27 | X | CD27 | CD27 | CD27 | X | CD27 | 1.25 |
+| **SB436** | **CD11c** | X | CD11c | CD11c | CD11c | CD11c | CD11c | CD11c | 2.5 |
+| **BV480** | **CD21** | CD21 | CD21 | CD21 | X | CD21 | X | CD21 | 1.25 |
+| **BV510** | **CD57** | CD57 | CD57 | CD57 | CD57 | X | CD57 | CD57 | 1.25 |
+| **BV605** | **Lambda** | Lambda | Lambda | X | Lambda | Lambda | X | Lambda | 5 |
+| **BV650** | **IgM** | IgM | IgM | IgM | X | IgM | X | IgM | 2.5 |
+| **BV711** | **CD117** | X | CD117 | CD117 | CD117 | X | CD117 | CD117 | 5 |
+| **BV750** | **CD14** | CD14 | CD14 | CD14 | CD14 | CD14 | CD14 | CD14 | 2.5 |
+| **BV785** | **CD19** | CD19 | CD19 | CD19 | CD19 | CD19 | CD19 | CD19 | 1 |
+| **BB515** | **CD5** | CD5 | CD5 | X | CD5 | CD5 | X | CD5 | 2.5 |
+| **RB545** | **CD11b** | CD11b | CD11b | CD11b | X | X | CD11b | CD11b | 1.25 |
+| **RB613** | **CD23** | X | CD23 | CD23 | CD23 | CD23 | X | CD23 | 1.25 |
+| **RB670** | **CD79b** | CD79b | CD79b | CD79b | X | X | X | CD79b | 1.25 |
+| **RB705** | **CD24** | CD24 | CD24 | X | CD24 | CD24 | X | CD24 | 1.25 |
+| **RB744** | **CD81** | CD81 | CD81 | CD81 | X | X | X | CD81 | 2.5 |
+| **RB780** | **CD16** | CD16 | CD16 | CD16 | CD16 | X | CD16 | CD16 | 1.25 |
+| **PE** | **CD38** | CD38 | CD38 | X | CD38 | CD38 | X | CD38 | 2.5 |
+| **PEDZL594** | **CD10** | CD10 | CD10 | CD10 | X | CD10 | X | CD10 | 2.5 |
+| **PE-F640** | **CD56** | X | CD56 | CD56 | CD56 | CD56 | CD56 | CD56 | 1.25 |
+| **RY703** | **CD43** | X | CD43 | CD43 | CD43 | X | X | CD43 | 1.25 |
+| **PE-Cy7** | **CD200** | CD200 | X | CD200 | CD200 | CD200 | X | CD200 | 1 |
+| **PE-F810** | **CD303** | CD303 | CD303 | CD303 | X | CD303 | CD303 | CD303 | 2.5 |
+| **APC** | **CD64** | X | CD64 | CD64 | CD64 | CD64 | CD64 | CD64 | 2.5 |
+| **AF647** | **IgD** | IgD | X | IgD | IgD | IgD | X | IgD | 1 |
+| **R720** | **IgA** | IgA | IgA | X | IgA | IgA | X | IgA | 2.5 |
+| **APC-Vio770** | **kappa** | kappa | kappa | kappa | X | kappa | X | kappa | 5 |
+| **APC-F810** | **CD15** | CD15 | CD15 | X | CD15 | X | CD15 | CD15 | 2.5 |
+| **IR-820** | **CD20** | X | CD20 | CD20 | CD20 | CD20 | X | CD20 | 2.5 |
+| **VK808** | **VK808** | VK808 | VK808 | VK808 | VK808 | VK808 | VK808 | VK808 | 0.25 |
 
 ## **Controls**
 
@@ -179,6 +180,14 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 ![](images/CLL_markers_on_CD19pos_healthy.png)
 
 ![](images/CLL_markers_on_CD19pos_CLL.png)
+
+## **Unmixing Matrix #002** {.tabset}
+
+### Description and files
+
+All-bead matrix (except viakrome808-viability and R720-IgA) ghost events appearing in the spectral ribbon were cleaned from the control files and imported back into unmixing experiment
+
+[Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
 
 # OMIP {.tabset}
 
