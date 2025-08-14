@@ -1,6 +1,6 @@
 ---
 title: "35-color B Cell + Myeloid Panel: Iteration 4"
-author: "John Bianchi Colangeli, Kelly Lundsten, Fanuel Messaggio, Andrew Patentrager"
+author: "John Bianchi Colangeli, Kelly Lundsten, Fanuel Messaggio, Andrew Patentreger"
 date: "July 2025"
 output: 
   html_document:
@@ -135,6 +135,7 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 | 12            | US_CLL_raw.fcs            |
 
 ### **single color control files** {.tabset}
+If a bead control filename contains _new, it means I reran this control at a later time. If a filename contains _cleaned, it is a cleaned control file and contains a subset of events from the original control file. 
 
 [Link to raw single-color control files](https://app.box.com/folder/333247847268)
 
