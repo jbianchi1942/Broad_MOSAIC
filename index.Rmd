@@ -189,14 +189,14 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 
 ![](images/CLL_markers_on_CD19pos_CLL.png)
 
-## Matrix #002 beads-only,cleaned {.tabset}
+## Matrix #002 beads-only_cleaned {.tabset}
 Refined bead-only matrix
 
 Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). If present in the original bead file and I was unable to make them go away, 'Ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment by gating on scatter and time and imported back into the main unmixing experiment.
 
 [Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
 
-## Matrix #003 - Cells only, added AF parameter
+## Matrix #003 - Cells-only, added AF parameter
 
 003 is entirely cell controls. 
 
