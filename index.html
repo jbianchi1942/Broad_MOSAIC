@@ -1450,6 +1450,12 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
+.tocify-subheader {
+display: inline;
+}
+.tocify-subheader .tocify-item {
+font-size: 0.95em;
+}
 </style>
 
 
@@ -2037,12 +2043,12 @@ by Nelson on on 7/11/25.</p>
 </ul>
 </div>
 </div>
-<div id="data-analysis" class="section level1 tabset">
-<h1 class="tabset">Data Analysis</h1>
-<div id="fcs-files" class="section level2 tabset">
-<h2 class="tabset"><strong>FCS Files</strong></h2>
+<div id="data-analysis" class="section level1">
+<h1>Data Analysis</h1>
+<div id="fcs-files" class="section level2">
+<h2>FCS Files</h2>
 <div id="fmms-and-mini-panels" class="section level3">
-<h3><strong>FMMs and mini-panels</strong></h3>
+<h3>FMMs and mini-panels</h3>
 <p><a href="https://app.box.com/folder/333246779155">Link to raw FCS
 files: FMMSs, mini-panels, fullstains</a></p>
 <table>
@@ -2275,7 +2281,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = true;
+    options.showAndHide = false;
     options.smoothScroll = true;
 
     // tocify

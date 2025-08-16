@@ -6,7 +6,7 @@ output:
   html_document:
     toc: true
     toc_float: 
-      collapsed: true
+      collapsed: false
     number_sections: false
 ---
 
@@ -111,11 +111,11 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 -   Assay gain settings were applied to all tubes/wells
 -   all samples run at medium medium flow rate
 
-# Data Analysis {.tabset}
+# Data Analysis
 
-## **FCS Files** {.tabset}
+## FCS Files
 
-### **FMMs and mini-panels**
+### FMMs and mini-panels
 
 [Link to raw FCS files: FMMSs, mini-panels, fullstains](https://app.box.com/folder/333246779155)
 
