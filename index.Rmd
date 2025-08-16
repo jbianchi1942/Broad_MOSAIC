@@ -134,45 +134,53 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 | 11            | US_healthy_raw.fcs        |
 | 12            | US_CLL_raw.fcs            |
 
-### **single color control files** {.tabset}
+### single-color control .fcs files
 If a bead control filename contains _new, it means I reran this control at a later time. If a filename contains _cleaned, it is a cleaned control file and contains a subset of events from the original control file. 
 
 [Link to raw single-color control files](https://app.box.com/folder/333247847268)
 
-## **Overview of the workflow**
+## Spectral unmixing evaluation
 
--   raw bead and cell control .fcs files were loaded into two separate experiment files (CytExpert off-instrument).
--   scatter and spectral ribbon plots were examined for each control one by one.
+-   Raw single-color control .fcs files were loaded into spectral unmixing experiments to generate spectral unmixing matrices, matrices are numbered 001-00X. 
 
-## **Unmixing Matrix #001** {.tabset}
+Matrices were applied to single stained cell files for each fluor in the panel. For every single stain, I generated 1 × N plots, where the primary fluor for a given single stain was plotted against all other unmixed parameters. I initially compared bead-only vs. cell-only matrices to determine which controls, cell or bead, provided optimal unmixing with minimal error. From there, hybrid matrices were constructed and evaluated on 1 x Ns of single stains.
 
-### **Description**
+I created a FlowJo layout that allows me to see all 1 x Ns for a given unmixed single-color file.
+I made a new layout for each matrix and spread, potential errors, and improvements were flagged.
 
-First unmxing matrix attempted. All controls were cleaned for contaminating events. All spectral controls are beads except for Viakrome808 (viability) and R720-IgA (I don't think this clone binds to VersaComp beads very well).
+red = bad
+green = good
+yellow = better but not great
+
+
+## Unmixing Matrix #001 - Beads-only
+First attempt.
+
+All spectral controls are beads except for Viakrome808 (viability) and R720-IgA (very few positive events possibly due to this clone not binding to beads)
 
 A complete copy of the unmixing experiment (.xitsp file + .fcs file directory with control files can be found [here](https://app.box.com/folder/334368687874))
 
-### **Unmixed .fcs files**
+### Unmixed .fcs files
 
 [FCS files: Unmixed FMMS, mini-panels, full stains, unstained for healthy and CLL](https://app.box.com/folder/333247578556)
 
-### **Spectral Unmixing Setup**
+### Spectral Unmixing Setup
 
 ![](images/001_spectral_unmixing_setup-01.png){width="800"}
 
-### **SSM**
+### SSM
 
 [Spectral Unmixing Details for 001](https://app.box.com/file/1938190300586)
 
-### **Unmixing results: unmixed controls**
+### Unmixing results: unmixed controls
 
 [PDFs of all unmixed controls for matrix 001](https://app.box.com/folder/333222412731)
 
-### **1xNs of unmixed single stained cells**
+### 1xNs of unmixed single stained cells
 
 [PDFs of single stained cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
 
-### **issues**
+### CLL Markers on B cells unmixed with 001-beads-only
 
 [link to pdfs of CLL markers gated on CD19+](https://app.box.com/folder/333471148033)
 
@@ -182,13 +190,32 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 
 ![](images/CLL_markers_on_CD19pos_CLL.png)
 
-## **Unmixing Matrix #002** {.tabset}
+## Unmixing Matrix #002 beads-only, cleaned {.tabset}
 
-### Description and files
+Description and files
 
-All-bead matrix (except viakrome808-viability and R720-IgA) ghost events appearing in the spectral ribbon were cleaned from the control files and imported back into unmixing experiment
+Cleaned all-bead matrix (except viakrome80 8-viability and R720-IgA). Each bead control was searched for 'ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment file by gating on scatter and time and imported back into the unmixing experiment.
 
 [Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
+
+## Unmixing Matrix #003 - Cells only with an added AF parameter
+
+003 is entirely cell controls. When I unmixed unstained cells with the first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels. I went back and added an AF parameter (unstained_2) by gating on monocytes and assigning U7 as the primary detector. Unstained cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient at unmixing monocyte derived AF. Unstained 1 and unstained 2 have similar but different signatures. The false positives went away after that. 
+
+## Unmixing Matrix #004vx - Hybrid with additional AF
+
+First iteration of a hybrid matrix starting with beads only (002) with added AF parameters from #003, and building from there. 
+If a fluor was unmixed better with cells in 003, I replaced the bead file with the cell file. 
+I am going through one by and one and tracking whether the unmixing looks the same or better after replacing with cells. 
+
+v1:
+all beads (except viakrome and R720) and monocyte AF
+
+v2:
+swapped for cells
+BUV496
+BV421
+    
 
 # OMIP {.tabset}
 
