@@ -22,7 +22,7 @@ output:
 
 # Summary
 
-Iteration 4 of B cell plus myeloid panel. This report contains descriptions of human samples used, panel information, staining protocol, instrument and acquisition settings, and the generated .fcs files. The data analysis section outlines the workflow for assessing single color control quality and optmiziation of unmixing. To evaluate spectral unmixing, Iterations of unmixing matrices were applied to single stained cell controls and healthy and disease samples,images and links to relevant plots. Lastly, an OMIP section was created to house data we need for the OMIP.
+Iteration 4 of B cell plus myeloid panel. This report contains descriptions of human samples used, panel information, staining protocol, instrument and acquisition settings, and the generated .fcs files. The 'Spectral Unmixing' section outlines the workflow for optmiziation of unmixing. To evaluate spectral unmixing, Iterations of unmixing matrices were applied to single stained cell controls and healthy and disease samples. Once the Unmixing is finalized, there will be an analysis section for full stain and mini-panels. An OMIP section was created to house data we need for the OMIP.
 
 # Materials and Methods {.tabset}
 
