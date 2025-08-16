@@ -1,7 +1,7 @@
 ---
 title: "35-color B Cell + Myeloid Panel: Iteration 4"
 author: "John Bianchi Colangeli, Kelly Lundsten, Fanuel Messaggio, Andrew Patentreger"
-date: "July 2025"
+date: "`r Sys.Date()`"
 output: 
   html_document:
     toc: true
@@ -179,7 +179,7 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 
 [PDFs of single stained cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
 
-### CLL Markers on B cells unmixed with 001-beads-only
+### CLL Markers on B cells
 
 [link to pdfs of CLL markers gated on CD19+](https://app.box.com/folder/333471148033)
 
@@ -189,10 +189,11 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 
 ![](images/CLL_markers_on_CD19pos_CLL.png)
 
-## Matrix #002 beads-only_cleaned {.tabset}
-Refined bead-only matrix
+## Matrix #002 Clean Beads-only {.tabset}
 
-Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). If present in the original bead file and I was unable to make them go away, 'Ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment by gating on scatter and time and imported back into the main unmixing experiment.
+Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). 
+
+If contaminating events were present in the original bead file and I was unable to make them go away, 'Ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment by gating on scatter and time and imported back into the main unmixing experiment.These files have '_cleaned' in the file name
 
 [Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
 
@@ -200,7 +201,7 @@ Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). If prese
 
 003 is entirely cell controls. 
 
-Note: In first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels in unstained cells. I went back and added an AF parameter (unstained_2) by gating on monocytes and assigning U7 as the primary detector. Unstained_cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient at unmixing all the AF. Unstained 1 and unstained 2 have similar but different signatures. The false positives went away after that. 
+Note: In first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels in unmixed unstained cells. I went back and added an AF parameter (unstained_2) by gating on monocytes and assigning U7 as the primary detector. Unstained_cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient to unmix the AF I was seeing in the 1 x Ns. Unstained_1 and unstained_2 have similar but different signatures. The false positives went away after that. 
 
 ## Matrix #004 - Hybrid
 
@@ -214,7 +215,7 @@ v1:
 all beads (except viakrome and R720) and monocyte AF
 
 v2:
-swapped for cells
+Fluors swapped for cells
 BUV496 - improved after replacing with cells
 BV421 - 
     
