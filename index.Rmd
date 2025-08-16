@@ -196,7 +196,7 @@ Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). If prese
 
 [Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
 
-## Matrix #003 - Cells-only, added AF parameter
+## Matrix #003 - Cells-only w/ AF
 
 003 is entirely cell controls. 
 
