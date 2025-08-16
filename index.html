@@ -1450,12 +1450,6 @@ font-size: 0.90em;
 .tocify .list-group-item {
 border-radius: 0px;
 }
-.tocify-subheader {
-display: inline;
-}
-.tocify-subheader .tocify-item {
-font-size: 0.95em;
-}
 </style>
 
 
@@ -2139,8 +2133,8 @@ given unmixed single-color file. I made a new layout for each matrix and
 spread, potential errors, and improvements were flagged.</p>
 <p>red = bad green = good yellow = better but not great</p>
 </div>
-<div id="unmixing-matrix-001---beads-only" class="section level2">
-<h2>Unmixing Matrix #001 - Beads-only</h2>
+<div id="matrix-001---beads-only" class="section level2">
+<h2>Matrix #001 - Beads-only</h2>
 <p>First attempt.</p>
 <p>All spectral controls are beads except for Viakrome808 (viability)
 and R720-IgA (very few positive events possibly due to this clone not
@@ -2310,7 +2304,7 @@ $(document).ready(function ()  {
       ignoreSelector: ".toc-ignore",
       scrollTo: 0
     };
-    options.showAndHide = false;
+    options.showAndHide = true;
     options.smoothScroll = true;
 
     // tocify
