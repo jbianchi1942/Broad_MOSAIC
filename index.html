@@ -2039,10 +2039,10 @@ by Nelson on on 7/11/25.</p>
 </div>
 <div id="data-analysis" class="section level1">
 <h1>Data Analysis</h1>
-<div id="fcs-files" class="section level2">
-<h2>FCS Files</h2>
-<div id="fmms-and-mini-panels" class="section level3">
-<h3>FMMs and mini-panels</h3>
+<div id="raw-fcs-files" class="section level2">
+<h2>Raw FCS Files</h2>
+<div id="fmms-minipanels" class="section level3">
+<h3>FMMs + MiniPanels</h3>
 <p><a href="https://app.box.com/folder/333246779155">Link to raw FCS
 files: FMMSs, mini-panels, fullstains</a></p>
 <table>
@@ -2104,8 +2104,8 @@ files: FMMSs, mini-panels, fullstains</a></p>
 </tbody>
 </table>
 </div>
-<div id="single-color-control-.fcs-files" class="section level3">
-<h3>single-color control .fcs files</h3>
+<div id="single-color-controls" class="section level3">
+<h3>Single-color controls</h3>
 <p>If a bead control filename contains _new, it means I reran this
 control at a later time. If a filename contains _cleaned, it is a
 cleaned control file and contains a subset of events from the original
@@ -2114,23 +2114,24 @@ control file.</p>
 single-color control files</a></p>
 </div>
 </div>
-<div id="spectral-unmixing-evaluation" class="section level2">
-<h2>Spectral unmixing evaluation</h2>
+<div id="spectral-unmixing" class="section level2">
+<h2>Spectral Unmixing</h2>
 <ul>
 <li>Raw single-color control .fcs files were loaded into spectral
-unmixing experiments to generate spectral unmixing matrices, matrices
-are numbered 001-00X.</li>
+unmixing experiments to generate spectral unmixing matrices, matrix
+iterations are numbered 001-00X.</li>
 </ul>
 <p>Matrices were applied to single stained cell files for each fluor in
 the panel. For every single stain, I generated 1 × N plots, where the
 primary fluor for a given single stain was plotted against all other
 unmixed parameters. I initially compared bead-only vs. cell-only
 matrices to determine which controls, cell or bead, provided optimal
-unmixing with minimal error. From there, hybrid matrices were
-constructed and evaluated on 1 x Ns of single stains.</p>
+unmixing with minimal error. From there, a hybrid matrix was constructed
+1 x Ns were re-evaluated.</p>
 <p>I created a FlowJo layout that allows me to see all 1 x Ns for a
-given unmixed single-color file. I made a new layout for each matrix and
-spread, potential errors, and improvements were flagged.</p>
+given unmixed single stain file. I made a new layout for each matrix
+iteration - spread, potential errors, and improvements from previous
+iteration were flagged.</p>
 <p>red = bad green = good yellow = better but not great</p>
 </div>
 <div id="matrix-001---beads-only" class="section level2">
@@ -2177,36 +2178,39 @@ recreated from this paper</a></p>
 </div>
 <div id="matrix-002-beads-onlycleaned" class="section level2 tabset">
 <h2 class="tabset">Matrix #002 beads-only,cleaned</h2>
-<p>Description and files</p>
-<p>Cleaned all-bead matrix (except viakrome80 8-viability and R720-IgA).
-Each bead control was searched for ‘ghost events’–spectral ribbon
-outliers that dont track with primary fluor– were cleaned from the
-control files in a separate experiment file by gating on scatter and
-time and imported back into the unmixing experiment.</p>
+<p>Refined bead-only matrix</p>
+<p>Cleaned beads-only matrix (except viakrome80 8-viability and
+R720-IgA). If present in the original bead file and I was unable to make
+them go away, ‘Ghost events’–spectral ribbon outliers that dont track
+with primary fluor– were cleaned from the control files in a separate
+experiment by gating on scatter and time and imported back into the main
+unmixing experiment.</p>
 <p><a href="https://app.box.com/folder/335882732501">Link to the cloned
 unmixing experiment with spectral unmixing details PDF</a></p>
 </div>
 <div id="matrix-003---cells-only-added-af-parameter" class="section level2">
 <h2>Matrix #003 - Cells only, added AF parameter</h2>
-<p>003 is entirely cell controls. When I unmixed unstained cells with
-the first version of this matrix, I noticed separate, distinct,
-AF-driven populations appearing positive in the UV channels. I went back
-and added an AF parameter (unstained_2) by gating on monocytes and
-assigning U7 as the primary detector. Unstained cells, the main negative
-control, was assigned B3 and gated on small lymphocytes, and was
-insufficient at unmixing monocyte derived AF. Unstained 1 and unstained
-2 have similar but different signatures. The false positives went away
+<p>003 is entirely cell controls.</p>
+<p>Note: In first version of this matrix, I noticed separate, distinct,
+AF-driven populations appearing positive in the UV channels in unstained
+cells. I went back and added an AF parameter (unstained_2) by gating on
+monocytes and assigning U7 as the primary detector. Unstained_cells, the
+main negative control, was assigned B3 and gated on small lymphocytes,
+and was insufficient at unmixing all the AF. Unstained 1 and unstained 2
+have similar but different signatures. The false positives went away
 after that.</p>
 </div>
-<div id="matrix-004---hybrid-with-af" class="section level2">
-<h2>Matrix #004 - Hybrid with AF</h2>
-<p>First iteration of a hybrid matrix starting with beads only (002)
-with added AF parameters from #003, and building from there. If a fluor
-was unmixed better with cells in 003, I replaced the bead file with the
-cell file. I am going through one by and one and tracking whether the
+<div id="matrix-004---hybrid" class="section level2">
+<h2>Matrix #004 - Hybrid</h2>
+<p>First iteration of a hybrid matrix starting with beads only (002),
+adding AF from #003, and building from there.</p>
+<p>If a fluor was unmixed better with cells in 003, I replaced the bead
+file with the cell file.</p>
+<p>I am going through 1 x Ns one by and one and tracking whether the
 unmixing looks the same or better after replacing with cells.</p>
 <p>v1: all beads (except viakrome and R720) and monocyte AF</p>
-<p>v2: swapped for cells BUV496 BV421</p>
+<p>v2: swapped for cells BUV496 - improved after replacing with cells
+BV421 -</p>
 </div>
 </div>
 <div id="omip" class="section level1 tabset">

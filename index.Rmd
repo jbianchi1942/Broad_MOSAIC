@@ -113,9 +113,9 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 
 # Data Analysis
 
-## FCS Files
+## Raw FCS Files
 
-### FMMs and mini-panels
+### FMMs + MiniPanels
 
 [Link to raw FCS files: FMMSs, mini-panels, fullstains](https://app.box.com/folder/333246779155)
 
@@ -134,24 +134,23 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 | 11            | US_healthy_raw.fcs        |
 | 12            | US_CLL_raw.fcs            |
 
-### single-color control .fcs files
+### Single-color controls
 If a bead control filename contains _new, it means I reran this control at a later time. If a filename contains _cleaned, it is a cleaned control file and contains a subset of events from the original control file. 
 
 [Link to raw single-color control files](https://app.box.com/folder/333247847268)
 
-## Spectral unmixing evaluation
+## Spectral Unmixing
 
--   Raw single-color control .fcs files were loaded into spectral unmixing experiments to generate spectral unmixing matrices, matrices are numbered 001-00X. 
+-   Raw single-color control .fcs files were loaded into spectral unmixing experiments to generate spectral unmixing matrices, matrix iterations are numbered 001-00X. 
 
-Matrices were applied to single stained cell files for each fluor in the panel. For every single stain, I generated 1 × N plots, where the primary fluor for a given single stain was plotted against all other unmixed parameters. I initially compared bead-only vs. cell-only matrices to determine which controls, cell or bead, provided optimal unmixing with minimal error. From there, hybrid matrices were constructed and evaluated on 1 x Ns of single stains.
+Matrices were applied to single stained cell files for each fluor in the panel. For every single stain, I generated 1 × N plots, where the primary fluor for a given single stain was plotted against all other unmixed parameters. I initially compared bead-only vs. cell-only matrices to determine which controls, cell or bead, provided optimal unmixing with minimal error. From there, a hybrid matrix was constructed 1 x Ns were re-evaluated.
 
-I created a FlowJo layout that allows me to see all 1 x Ns for a given unmixed single-color file.
-I made a new layout for each matrix and spread, potential errors, and improvements were flagged.
+I created a FlowJo layout that allows me to see all 1 x Ns for a given unmixed single stain file.
+I made a new layout for each matrix iteration - spread, potential errors, and improvements from previous iteration were flagged.
 
 red = bad
 green = good
 yellow = better but not great
-
 
 ## Matrix #001 - Beads-only
 First attempt.
@@ -191,30 +190,33 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 ![](images/CLL_markers_on_CD19pos_CLL.png)
 
 ## Matrix #002 beads-only,cleaned {.tabset}
+Refined bead-only matrix
 
-Description and files
-
-Cleaned all-bead matrix (except viakrome80 8-viability and R720-IgA). Each bead control was searched for 'ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment file by gating on scatter and time and imported back into the unmixing experiment.
+Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). If present in the original bead file and I was unable to make them go away, 'Ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment by gating on scatter and time and imported back into the main unmixing experiment.
 
 [Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
 
 ## Matrix #003 - Cells only, added AF parameter
 
-003 is entirely cell controls. When I unmixed unstained cells with the first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels. I went back and added an AF parameter (unstained_2) by gating on monocytes and assigning U7 as the primary detector. Unstained cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient at unmixing monocyte derived AF. Unstained 1 and unstained 2 have similar but different signatures. The false positives went away after that. 
+003 is entirely cell controls. 
 
-## Matrix #004 - Hybrid with AF
+Note: In first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels in unstained cells. I went back and added an AF parameter (unstained_2) by gating on monocytes and assigning U7 as the primary detector. Unstained_cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient at unmixing all the AF. Unstained 1 and unstained 2 have similar but different signatures. The false positives went away after that. 
 
-First iteration of a hybrid matrix starting with beads only (002) with added AF parameters from #003, and building from there. 
-If a fluor was unmixed better with cells in 003, I replaced the bead file with the cell file. 
-I am going through one by and one and tracking whether the unmixing looks the same or better after replacing with cells. 
+## Matrix #004 - Hybrid
+
+First iteration of a hybrid matrix starting with beads only (002), adding AF from #003, and building from there. 
+
+If a fluor was unmixed better with cells in 003, I replaced the bead file with the cell file.
+
+I am going through 1 x Ns one by and one and tracking whether the unmixing looks the same or better after replacing with cells. 
 
 v1:
 all beads (except viakrome and R720) and monocyte AF
 
 v2:
 swapped for cells
-BUV496
-BV421
+BUV496 - improved after replacing with cells
+BV421 - 
     
 # OMIP {.tabset}
 
