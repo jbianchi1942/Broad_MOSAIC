@@ -2196,12 +2196,13 @@ unmixing experiment with spectral unmixing details PDF</a></p>
 <p>003 is entirely cell controls.</p>
 <p>Note: In first version of this matrix, I noticed separate, distinct,
 AF-driven populations appearing positive in the UV channels in unmixed
-unstained cells. I went back and added an AF parameter (unstained_2) by
-gating on monocytes and assigning U7 as the primary detector.
-Unstained_cells, the main negative control, was assigned B3 and gated on
-small lymphocytes, and was insufficient to unmix the AF I was seeing in
-the 1 x Ns. Unstained_1 and unstained_2 have similar but different
-signatures. The false positives went away after that.</p>
+unstained cells. I went back and added an AF parameter
+(unstained_cells_2) by gating on monocytes and assigning U7 as the
+primary detector. Unstained_cells, the main negative control, was
+assigned B3 and gated on small lymphocytes, and was insufficient to
+unmix the AF I was seeing in the 1 x Ns. Unstained_cells_1 and
+unstained_cells_2 have similar but different signatures. The false
+positives went away after that.</p>
 <p>note:</p>
 <p>BV711 - CD117 - rare CD303- CDF34 - rare CD10 - rare SB436 - Cd11c -
 rare BUV661 - CD34 - rarish</p>
@@ -2224,8 +2225,9 @@ cells)</p>
 w/cells - cells didnt make those errors go away.</p>
 <p>BV605-lambda - note: in unmixed singles when gating on monocytes, a
 BV605+ population nucleates around 10e4. In lymphocytes, lambda
-expression is continuous but is brightest &lt; 10e5. lambda should not
-be expressed in monocytes. try putting on cells instead of beads</p>
+expression is continuous but is brightest &lt; 10e5. monocyte AF isnt
+being unmixed out of BV605, does is matter? try putting on cells instead
+of beads.lambda improves on lymphocytes with cells control.</p>
 </div>
 </div>
 <div id="omip" class="section level1 tabset">
