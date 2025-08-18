@@ -238,7 +238,11 @@ BV510 - improved after replacing with cells (brighter on cells)
 v5: 
 BUV661 - CD34, errors in APC-CD64 and AF647-IgD channels, try w/cells - cells didnt make those errors go away.
 
-BV605-lambda - note: in unmixed singles when gating on monocytes, a BV605+ population nucleates around 10e4. In lymphocytes, lambda expression is continuous but is brightest < 10e5. monocyte AF isnt being unmixed out of BV605, does is matter? try putting on cells instead of beads.lambda improves on lymphocytes with cells control. 
+BV605-lambda - note: in unmixed singles when gating on monocytes, a BV605+ population nucleates around 10e4. In lymphocytes, lambda expression is continuous but is brightest < 10e5. monocyte AF isnt being unmixed out of BV605, does is matter? try putting on cells instead of beads. lambda improves on lymphocytes with cell control in some channels, looks better in cytexpert scaling then flowjo
+
+BV750-CD14 - has spread but only in channels assigned with B cell markers so its fine
+
+BV785-CD19 - overunmixing from CD27, slight warpy error into negative in BV421 channel, replacing with cells - fixed with cells!
     
 # OMIP {.tabset}
 
