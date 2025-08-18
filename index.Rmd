@@ -245,6 +245,12 @@ BV750-CD14 - has spread but only in channels assigned with B cell markers so its
 BV785-CD19 - overunmixing from CD27, slight warpy error into negative in BV421 channel, replacing with cells - fixed with cells
 
 RB670-CD79b - reaching up into RB705-CD24, spread in RB705-IgD, even spread in APCF810-CD15, double positive pop in BB515-CD5 even when gating on lymphs. Trying cells. gating on the brightest cells improved unmixing. there is still a BB515-CD5 double positive population rising from ~10e5, i'll address BB515 next.
+
+BB515-CD5 - put this on cells (brighter on cells), still a CD5+/CD79b+ in the CD79b unmixed single stain.
+
+APV-Vio770-kappa - has wierd stuff going on, trying on cells
+
+
     
 # OMIP {.tabset}
 
