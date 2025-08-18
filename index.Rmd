@@ -29,7 +29,7 @@ Iteration 4 of B cell plus myeloid panel. This report contains descriptions of h
 ## **PBMCs**
 
 |  |  |
-|-------------------------|:-----------------------------------------------|
+|-------------------------|:---------------------------------------------|
 | **Healthy PBMC** | Flow core's stock of cryospreserved PBMC from a single donor. Ficoll separated, stored at -80C in FBS +10% DMSO |
 | **CLL PBMC** | Frozen CLL PBMC provided by Beckman (tube 1/2 from one of two donor samples) |
 
@@ -136,24 +136,23 @@ Instrument was QCd on the day of acquistion (7/22/25) but did not pass for all d
 | 12            | US_CLL_raw.fcs            |
 
 ### Single-color controls
-If a bead control filename contains _new, it means I reran this control at a later time. If a filename contains _cleaned, it is a cleaned control file and contains a subset of events from the original control file. 
+
+If a bead control filename contains \_new, it means I reran this control at a later time. If a filename contains \_cleaned, it is a cleaned control file and contains a subset of events from the original control file.
 
 [Link to raw single-color control files](https://app.box.com/folder/333247847268)
 
 # Spectral Unmixing
 
--   Raw single-color control .fcs files were loaded into spectral unmixing experiments to generate spectral unmixing matrices, matrix iterations are numbered 001-00X. 
+-   Raw single-color control .fcs files were loaded into spectral unmixing experiments to generate spectral unmixing matrices, matrix iterations are numbered 001-00X.
 
 Matrices were applied to single stained cell files for each fluor in the panel. For every single stain, I generated 1 × N plots, where the primary fluor for a given single stain was plotted against all other unmixed parameters. I initially compared bead-only vs. cell-only matrices to determine which controls, cell or bead, provided optimal unmixing with minimal artifacts. From there, a hybrid matrix was constructed 1 x Ns were re-evaluated.
 
-I created a FlowJo layout that allows me to see all 1 x Ns for a given unmixed single stain file.
-I made a new layout for each matrix iteration - spread, potential errors, and improvements from previous iteration were flagged.
+I created a FlowJo layout that allows me to see all 1 x Ns for a given unmixed single stain file. I made a new layout for each matrix iteration - spread, potential errors, and improvements from previous iteration were flagged.
 
-red = bad
-green = good
-yellow = better but not great
+red = bad green = good yellow = better but not great
 
 ## Matrix #001 - Beads-only ugly
+
 First unmixing attempt.
 
 All spectral controls are beads except for Viakrome808 (viability) and R720-IgA (very few positive events possibly due to this clone not binding to beads)
@@ -176,7 +175,7 @@ A complete copy of the unmixing experiment (.xitsp file + .fcs file directory wi
 
 [PDFs of all unmixed controls for matrix 001](https://app.box.com/folder/333222412731)
 
-### 1 x Ns 
+### 1 x Ns
 
 [PDFs of single stained cell control 1xNs unmixed with matrix 001](https://app.box.com/folder/333241328640)
 
@@ -194,64 +193,60 @@ Took a peek at CLL markers on B cells
 
 ## Matrix #002 - Beads-only cleaned
 
-Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA). 
+Cleaned beads-only matrix (except viakrome80 8-viability and R720-IgA).
 
-If contaminating events were present in the original bead file and I was unable to make them go away, 'Ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment by gating on scatter and time and imported back into the main unmixing experiment.These files have '_cleaned' in the file name
+If contaminating events were present in the original bead file and I was unable to make them go away, 'Ghost events'--spectral ribbon outliers that dont track with primary fluor-- were cleaned from the control files in a separate experiment by gating on scatter and time and imported back into the main unmixing experiment.These files have '\_cleaned' in the file name
 
 [Link to the cloned unmixing experiment with spectral unmixing details PDF](https://app.box.com/folder/335882732501)
 
 ## Matrix #003 - Cells-only w/ AF
 
-003 is entirely cell controls. 
+003 is entirely cell controls.
 
-Note: In first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels in unmixed unstained cells. I went back and added an AF parameter (unstained_cells_2) by gating on monocytes and assigning U7 as the primary detector. Unstained_cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient to unmix the AF I was seeing in the 1 x Ns. Unstained_cells_1 and unstained_cells_2 have similar but different signatures. The false positives went away after that. 
+Note: In first version of this matrix, I noticed separate, distinct, AF-driven populations appearing positive in the UV channels in unmixed unstained cells. I went back and added an AF parameter (unstained_cells_2) by gating on monocytes and assigning U7 as the primary detector. Unstained_cells, the main negative control, was assigned B3 and gated on small lymphocytes, and was insufficient to unmix the AF I was seeing in the 1 x Ns. Unstained_cells_1 and unstained_cells_2 have similar but different signatures. The false positives went away after that.
 
-note: 
+note:
 
-BV711 - CD117 - rare
-CD303- CDF34 - rare
-CD10 - rare
-SB436 - Cd11c - rare
-BUV661 - CD34 - rarish
+BV711 - CD117 - rare CD303- CDF34 - rare CD10 - rare SB436 - Cd11c - rare BUV661 - CD34 - rarish
 
 ## Matrix #004 - Cell-Bead Hybrid
 
-First iteration of a hybrid matrix starting with beads only (002), adding same AF controls as #003, and building from there. 
+First iteration of a hybrid matrix starting with beads only (002), adding same AF controls as #003, and building from there.
 
 This approach favors beads, but if a fluor was unmixed better with cells in 003, I replaced the bead file with the cell file.
 
-Current status:
-I am going through 1 x Ns one by and one and tracking whether the unmixing looks the same or better after replacing with cells. 
+Current status: I am going through 1 x Ns one by and one and tracking whether the unmixing looks the same or better after replacing with cells.
 
-v1:
-all beads (except viakrome and R720) and monocyte AF
+v1: all beads (except viakrome and R720) and monocyte AF
 
-v2:
-BUV496 - improved after replacing with cells
+v2: BUV496 - improved after replacing with cells
 
-v3:
-BV421 - improved after replacing with cells
+v3: BV421 - improved after replacing with cells
 
-v4:
-BV510 - improved after replacing with cells (brighter on cells) 
+v4: BV510 - improved after replacing with cells (brighter on cells)
 
-v5: 
-BUV661 - CD34, errors in APC-CD64 and AF647-IgD channels, try w/cells - cells didnt make those errors go away.
+v5: BUV661 - CD34, errors in APC-CD64 and AF647-IgD channels, try w/cells - cells didnt make those errors go away.
 
-BV605-lambda - note: in unmixed singles when gating on monocytes, a BV605+ population nucleates around 10e4. In lymphocytes, lambda expression is continuous but is brightest < 10e5. monocyte AF isnt being unmixed out of BV605, does is matter? try putting on cells instead of beads. lambda improves on lymphocytes with cell control in some channels, looks better in cytexpert scaling then flowjo
+[Unmixed FCS files are HERE](https://app.box.com/folder/336525177002)
+
+BV605-lambda - note: in unmixed singles when gating on monocytes, a BV605+ population nucleates around 10e4. In lymphocytes, lambda expression is continuous but is brightest \< 10e5. monocyte AF isnt being unmixed out of BV605, does is matter? try putting on cells instead of beads. lambda improves on lymphocytes with cell control in some channels, looks better in cytexpert scaling then flowjo
 
 BV750-CD14 - has spread but only in channels assigned with B cell markers so its fine
 
 BV785-CD19 - overunmixing from CD27, slight warpy error into negative in BV421 channel, replacing with cells - fixed with cells
 
-RB670-CD79b - reaching up into RB705-CD24, spread in RB705-IgD, even spread in APCF810-CD15, double positive pop in BB515-CD5 even when gating on lymphs. Trying cells. gating on the brightest cells improved unmixing. there is still a BB515-CD5 double positive population rising from ~10e5, i'll address BB515 next.
+RB670-CD79b - reaching up into RB705-CD24, spread in RB705-IgD, even spread in APCF810-CD15, double positive pop in BB515-CD5 even when gating on lymphs. Trying cells. gating on the brightest cells improved unmixing. there is still a BB515-CD5 double positive population rising from \~10e5, i'll address BB515 next.
 
 BB515-CD5 - put this on cells (brighter on cells), still a CD5+/CD79b+ in the CD79b unmixed single stain.
 
-APV-Vio770-kappa - has wierd stuff going on, trying on cells
+APV-Vio770-kappa - has some weird trespassing extra bright events, trying on cells
 
+## Matrix #004_v5_Bcellonly - Bcellonly minipanel
 
-    
+same matrix but only fluors in Bcellonly minipanel
+
+[Unmixed FCS Files are HERE](https://app.box.com/folder/336531063895)
+
 # OMIP {.tabset}
 
 Place to store data we need for OMIP
