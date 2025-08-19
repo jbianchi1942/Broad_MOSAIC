@@ -241,7 +241,7 @@ BB515-CD5 - put this on cells (brighter on cells), still a CD5+/CD79b+ in the CD
 
 APV-Vio770-kappa - has some weird trespassing extra bright events, trying on cells
 
-## Matrix #004_v5_Bcellonly
+### Matrix #004 - v5 Bcellonly
 
 same matrix but nonBcellonly fluors omitted
 
