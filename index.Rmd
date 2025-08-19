@@ -247,6 +247,26 @@ same matrix but nonBcellonly fluors omitted
 
 [Unmixed FCS Files are HERE](https://app.box.com/folder/336531063895)
 
+# Notes/To Do
+
+- we probably need a separate matrix for CLL
+
+- Could we use the healthy matrix with CLL AF parameters to unmix CLL? try.
+
+- incorporate wash step for light-chain staining to avoid k/l double positives
+
+TO DO:
+
+- check on the instrument, make sure it's still passing QC
+
+- make Bcellonly mini-matrix for iteration_3, upload, organize the box
+
+- make a mini-matrix for NKBDCM for iteration_4
+
+- organize titration files and plots
+
+- inventory antibody amounts, see what is running low, check blocks
+
 # OMIP {.tabset}
 
 Place to store data we need for OMIP
