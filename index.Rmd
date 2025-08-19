@@ -247,7 +247,7 @@ same matrix but nonBcellonly fluors omitted
 
 [Unmixed FCS Files are HERE](https://app.box.com/folder/336531063895)
 
-# Notes/To Do
+# Notes/To Do/Questions
 
 - we probably need a separate matrix for CLL
 
@@ -266,6 +266,8 @@ TO DO:
 - organize titration files and plots
 
 - inventory antibody amounts, see what is running low, check blocks
+
+Questions:
 
 # OMIP {.tabset}
 
