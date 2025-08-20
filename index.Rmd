@@ -257,6 +257,8 @@ same 004_v5 matrix but non-Bcellonly fluors omitted
 
 TO DO:
 
+- Add CLL unstained to matrix
+
 - check on the instrument, make sure it's still passing QC
 
 - make Bcellonly mini-matrix for iteration_3, upload, organize the box
