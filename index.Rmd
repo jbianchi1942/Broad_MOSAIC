@@ -253,6 +253,8 @@ meeting notes 8/21
 CD15 is grans, low is monos
 trans are CD5 low
 CD10 confirms transitinal
+get rid of APC-CD64?
+add CD185 (CXCR5)?
 
 - we probably need a separate matrix for CLL
 
