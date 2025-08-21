@@ -248,6 +248,11 @@ same 004_v5 matrix but non-Bcellonly fluors omitted
 [Unmixed FCS Files are HERE](https://app.box.com/folder/336531063895)
 
 # Notes/To Do/Questions
+meeting notes 8/21
+34x45 as dump for leukocyte progenitors
+CD15 is grans, low is monos
+trans are CD5 low
+CD10 confirms transitinal
 
 - we probably need a separate matrix for CLL
 
@@ -256,6 +261,14 @@ same 004_v5 matrix but non-Bcellonly fluors omitted
 - incorporate wash step for light-chain staining to avoid k/l double positives
 
 TO DO:
+
+- lookup titration for CXCR5
+
+- look at single colors for look at kappa vs IgA, all red laser fluors against eachoother, include CD20, R720 should peak in 700ish off the red
+
+- double check BV510 and BUV496
+
+- make R720 plots
 
 - Add CLL unstained to matrix
 
